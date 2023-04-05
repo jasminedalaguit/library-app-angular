@@ -1,0 +1,51 @@
+.login{
+	width: 85%;
+	margin: auto;
+	padding: 35px 0;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.login ul li{
+	list-style: none;
+	display: inline-block;
+	margin: 0 2px;
+}
+.login ul li button{
+	padding: 10px 20px;
+	color: #034684;
+}
+.logo{
+	width: 250px;
+	position: flex;
+	top: 5%;
+	left: 5%;
+}
+@media screen and (max-width: 770px){
+    .logo{
+        width: 200px;
+        top: 5%;
+        left: 5%;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+   .login{
+	width: 85%;
+	margin: auto;
+	padding: 35px 0;
+	display: inline-block;
+	align-items: center;
+    }
+    .login ul li{
+        list-style: none;
+        display: inline-block;
+        margin: 0 2px;
+    }
+    .login ul li button{
+        margin-top: 20px;
+        margin-left: 60px;
+        margin-right: -57px;
+        padding: 10px 20px;
+        color: #034684;
+    }
+}

@@ -1,0 +1,68 @@
+#contacts{
+	padding: 100px 0 20px;
+	background: #efefef;
+}
+.headers{
+	text-align: center;
+	padding-bottom: 20px;
+}
+.headers p{
+	margin: auto;
+	font-size: 30px;
+	color: #2986cc;
+	font-weight: bold;
+	position: relative;
+	z-index: 1;
+	display: inline-block;
+}
+.headers p::after{
+	content:'';
+	width: 50px;
+	height: 35px;
+	background: linear-gradient(#034684,white);
+	position: absolute;
+	top: -20px;
+	left: 148px;
+	z-index: -1;
+	transform: rotate(5deg);
+	border-top-left-radius: 35px;
+	border-bottom-right-radius: 35px;
+}
+.headers h1{
+	font-size: 50px;
+}
+
+.contacts-center{
+	flex-basis: 70%;
+	//padding: ;
+	margin-bottom: 30px;
+	text-align: center;
+}
+.contacts-center .fa{
+	font-size: 20px;
+	color: #034684;
+	margin-right: 10px;
+}
+.social-links{
+	text-align: center;
+}
+.social-links .fa{
+	height: 40px;
+	width: 40px;
+	font-size: 20px;
+	line-height: 40px;
+	border: 1px solid #034684;
+	margin: 10px 5px 0;
+	color: #034684;
+	cursor: pointer;
+	transition: .5s;
+}
+.social-links .fa:hover{
+	background: #034684;
+	color: white;
+	transform: translateY(-7px);
+}
+.social-links p{
+	font-size: 10px;
+	margin-top: 20px;
+}

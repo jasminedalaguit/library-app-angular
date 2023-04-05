@@ -1,0 +1,40 @@
+
+
+<div class="container my-5"> 
+    <h2>Update Book</h2>
+    <form [formGroup]="reactiveForm" (ngSubmit)="onSubmit()">
+        <input type ="hidden" name="id" value="">
+        <div class="row mb-3">
+            <label class="col-sm-3 col-form-label">Book Title</label>
+            <div class="col-sm-6"> 
+                <input type="text" class="form-control" name="book_title" formControlName="book_title" value="">
+            </div>
+        </div>
+        <div class="row mb-3">
+            <label class="col-sm-3 col-form-label">Author</label>
+            <div class="col-sm-6"> 
+                <input type="text" class="form-control" name="author" formControlName="author" value="">
+            </div>
+        </div>
+        <div class="row mb-3">
+            <label class="col-sm-3 col-form-label">Category</label>
+            <div class="col-sm-6"> 
+                <input name="category" class="form-control" formControlName="category" value="">
+            </div>
+        </div>
+        <div class="row mb-3">
+            <label class="col-sm-3 col-form-label">Upload Book</label>
+            <div class="col-sm-6"> 
+                <input id="pdf" type="file" class="form-control" name="pdf" formControlName="pdf" value="" required>
+            </div>
+        </div>
+        <div class="row mb-3">
+            <div class="offset-sm-3 col-sm-3 d-grid">
+                <button type="submit" [disabled]="!reactiveForm.valid" class="btn btn-primary">Submit</button>
+            </div>
+            <div class="col-sm-3 d-grid">
+                <a class="btn btn-outline-primary" routerLink="/admin/books/books" role="button"> Cancel</a>
+            </div>
+        </div>
+    </form>
+</div>

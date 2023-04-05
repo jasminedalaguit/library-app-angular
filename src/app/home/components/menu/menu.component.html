@@ -1,0 +1,17 @@
+<div id="sideNav" [ngClass]="{'open':isSideNavOpen}">
+	<nav>
+	<ul>
+		<li><a href="#banner">HOME</a></li>
+		<li><a href="#inquiry">ASK US</a></li>
+		<li><a href="#about">ABOUT</a></li>
+		<li><a href="#developer">DEVELOPER</a></li>
+		<li> <a href="#contacts">CONTACTS</a></li>
+	</ul>
+	</nav>
+</div>
+<div id="menuBtn" (click)='onClick()'>
+	<img *ngIf="!isSideNavOpen" src="assets/images/menu.png" id="menu">
+
+    <img *ngIf="isSideNavOpen" src="assets/images/close.png" id="menu">
+
+</div>

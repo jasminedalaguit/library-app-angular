@@ -1,0 +1,32 @@
+body {
+    background-color: #034684;
+}
+
+h1 {
+    margin-top: 50px;
+    text-align: center;
+    color: #034684;
+    word-spacing: 10px;
+    font-family: times new roman;
+}
+
+.form {
+    max-width: 450px;
+    margin: 0 auto;
+    background-color: #034684;
+    margin-top: 3%;
+    padding: 50px;
+}
+
+.input-element {
+    padding: 20px;
+}
+
+.input-element input {
+    width: 100%;
+}
+
+.input-element input.ng-invalid.ng-touched {
+    width: 100%;
+    border: red 1px solid;
+}

@@ -1,0 +1,19 @@
+
+<div class="container my-4">
+    <a style="margin-top: 5%"class="btn btn-primary" routerLink="" role="button">Back to Homepage</a>
+    <h1> LOG IN TO YOUR ACCOUNT </h1> 
+    <div class="form">
+        <form [formGroup]="reactiveForm" (ngSubmit)="onSubmit()">
+            <div class="input-element">
+                <input type="text" class="form-control" name="username" formControlName="username" placeholder="Username">
+            </div>
+            <div class="input-element">
+                <input type="password" class="form-control" name="password" formControlName="password" placeholder="Password">
+            </div>
+            <div class="container" style="background-color:#f1f1f1">
+            </div>
+            <div class="input-element">
+                <input type="submit" value="Login" name="submit" [disabled]="!reactiveForm.valid" class="form-control btn btn-warning">
+            </div>
+        </form>
+    </div>
