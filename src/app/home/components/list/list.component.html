@@ -1,0 +1,8 @@
+<div *ngFor="let category of categories" class="banner-btn"> 
+    <style>
+        .banner-btn {
+            display: inline-block; 
+        }
+    </style>
+<a routerLink="categories/bookscontent/{{category.id}}"><span></span> {{category.category_name}} </a>
+</div>

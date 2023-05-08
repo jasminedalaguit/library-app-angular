@@ -1,0 +1,19 @@
+<section id="booksContent">
+	<div class="booksContent-text">
+		<div class="booksContent-button"><a routerLink=""> <button>Go Back</button> </a> </div>
+		<h1> {{category_name}}</h1>
+
+		<div *ngFor="let book of books" class="banner-btn">
+			<style>
+				.banner-btn {
+					display: inline-block;
+				}
+			</style>
+			<a target="_blank" href='{{book.file_url}}'><span></span>{{book.book_title}}</a>
+		</div>
+
+			<div *ngIf="!books" class="xyz">
+				<p>No books available</p>
+			</div>
+	</div>
+</section>

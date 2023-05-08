@@ -4,7 +4,7 @@ import { HomeRoutingModule } from './home-routing.module';
 import { HomeComponent } from './components/home/home.component';
 import { TopBarComponent } from './components/top-bar/top-bar.component';
 import { MenuComponent } from './components/menu/menu.component';
-import { CategoriesComponent } from './components/categories/categories.component';
+import { ListComponent } from './components/list/list.component';
 import { InquiriesComponent } from './components/inquiries/inquiries.component';
 import { AboutComponent } from './components/about/about.component';
 import { DeveloperComponent } from './components/developer/developer.component';
@@ -18,7 +18,7 @@ import { ContactsComponent } from './components/contacts/contacts.component';
     HomeComponent,
     TopBarComponent,
     MenuComponent,
-    CategoriesComponent,
+    ListComponent,
     InquiriesComponent,
     AboutComponent,
     DeveloperComponent,

@@ -6,8 +6,9 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HomeModule } from './home/home.module';
 import { AuthModule } from './auth/auth.module';
-import { CategoriesModule } from './categories/categories.module';
 import { AdminModule } from './admin/admin.module';
+import { BookscontentModule } from './categories/bookscontent.module';
+
 
 
 
@@ -21,10 +22,10 @@ import { AdminModule } from './admin/admin.module';
     BrowserModule,
     HomeModule,
     AuthModule,
-    CategoriesModule,
     AdminModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BookscontentModule,
 
   ],
   providers: [],

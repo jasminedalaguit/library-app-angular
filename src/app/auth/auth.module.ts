@@ -12,14 +12,12 @@ import { HttpClientModule } from '@angular/common/http';
 
 
 
+
 @NgModule({
   declarations: [
     SignupComponent,
     LoginComponent,
     LogoutComponent,
-
-
-  
   
   ],
   imports: [

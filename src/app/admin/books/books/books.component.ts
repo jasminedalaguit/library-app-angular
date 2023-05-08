@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { BooksInterface } from '../services/books.interface';
 import { BooksService } from '../services/books.service';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
+import { Categories } from '../../categories/services/categories.interface';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-books',
@@ -10,10 +12,13 @@ import { Router } from '@angular/router';
 })
 export class BooksComponent implements OnInit {
   books: Array<BooksInterface> = [];
+  categories: Array<Categories> = [];
 
   constructor(
     private booksService: BooksService,
-    private router: Router) { }
+    private router: Router,
+    private route: ActivatedRoute,
+    private http: HttpClient) { }
 
   ngOnInit(): void {
     this.booksService.getBooks().subscribe(data => {

@@ -1,0 +1,111 @@
+body{
+	margin: 0;
+	padding: 100vp; 
+}
+#booksContent{
+	background: linear-gradient(rgba(0,0,0,0.3),#034684), url("/assets/images/academic.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-attachment: fixed !important;
+	height: 100vh;
+}
+.booksContent-text{
+	text-align: center;
+	color: white;
+	padding: 50px;
+}
+.booksContent-text h1{
+	font-size: 70px;
+	font-family: times new roman;
+	text-shadow: 5px 5px 2px black;
+	margin-top: -200px;
+	padding-top: 150px;
+	margin-bottom: 30px;
+}
+.booksContent-button{
+	text-align: left;
+	margin-top: -100px;
+	padding-top: 150px;
+	margin-left: 50px;
+}
+.booksContent-button button{
+	padding: 10px 20px;
+	color: #034684;
+}
+.banner-btn{
+	margin: 30px auto 0;
+}
+.banner-btn a{
+	width: 250px;
+	height: 75px;
+	text-decoration: none;
+	font-size: 20px;
+	font-weight: bold;
+	display: inline-block;
+	margin: 0 15px;
+	padding: 5px 5px;
+	color: white;
+	border: 3px solid white;
+	position: relative;
+	z-index: 1;
+	transition: color 0.5s;
+}
+.banner-btn a span{
+	width: 0;
+	height: 100%;
+	position: absolute;  
+	top: 0;
+	left: 0;
+	background: white;
+	z-index: -1;
+	transition: 0.5s;
+}
+.banner-btn a:hover span{
+	width: 100%;
+}
+.banner-btn a:hover{
+	color: black;
+}
+.xyz p{
+	text-align: center;
+	font-size: 35px;
+}
+@media screen and (max-width: 770px){
+.academic-text{
+	padding: 130px;
+}
+.academic-text h1{
+	font-size: 50px;
+	text-align: center;
+	margin-top: -260px;
+	margin-left: -170px;
+}
+.logo{
+	width: 80px;
+	position: absolute;
+	top: 7.5%;
+	left: 5%;
+}
+.banner-btn{
+	margin: -25px 0 -250px -50px;
+}
+.banner-btn a{
+	width: 200px;
+	text-decoration: none;
+	font-size: 20px;
+	margin: 5px 15px;
+	padding: 10px 5px;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+

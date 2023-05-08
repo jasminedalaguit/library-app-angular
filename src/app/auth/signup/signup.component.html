@@ -1,37 +1,57 @@
-
 <div class="container my-4">
     <h1>SIGN UP</h1>
     <a class="btn btn-primary" routerLink="" role="button">Back to Homepage</a>
     <a style="margin-left: 75%" class="btn btn-primary" routerLink="/auth/login" role="button">Login</a>
     <div class="form">
         <form [formGroup]="reactiveForm" (ngSubmit)="onSubmit()">
-            <div class="input-element">
-                <input type="text" class="form-control" id="firstname" formControlName="firstname" placeholder="First Name">
+            <div *ngIf="successMessage" class='row mb-3'>
+                <div class='offset-sm col-sm'>
+                    <div style="text-align:center;" class='alert alert-success alert-dismissible fade show'
+                        role='alert'>
+                        <strong>You are successfully signed up!<br>You can proceed to login.</strong>
+                        <button (click)="closeSuccessMessage()" type='button' class='btn-close' data-bs-dismiss='alert'
+                            aria-label='Close'></button>
+                    </div>
+                </div>
             </div>
-                <div class="input-element">
-                <input type="text" class="form-control" name="lastname" formControlName="lastname" placeholder="Last Name">
+            <div class="col-sm-15">
+                <div *ngIf="hasError" class='alert alert-warning alert-dismissible fade show' role='alert'>
+                    <strong *ngFor="let messages of errorMessages"> {{ messages }}</strong>
+                    <button (click)="closeErrorMessage()" type='button' class='btn-close' data-bs-dismiss='alert'
+                        aria-label='Close'></button>
+                </div>
+            </div>
+            <div class="input-element">
+                <input type="text" class="form-control" id="firstname" formControlName="firstname"
+                    placeholder="First Name">
+            </div>
+            <div class="input-element">
+                <input type="text" class="form-control" name="lastname" formControlName="lastname"
+                    placeholder="Last Name">
             </div>
             <div class="input-element">
                 <input type="email" class="form-control" name="email" formControlName="email" placeholder="Email">
+                <small class="text-danger" *ngIf="reactiveForm.get('email').hasError('email')">
+                    <br>* Field must be in an email format.
+                </small>
             </div>
             <div class="input-element">
-                <input type="text" class="form-control" name="username" formControlName="username" placeholder="Username">
+                <input type="text" class="form-control" name="username" formControlName="username"
+                    placeholder="Username">
+                <!-- <small class="text-danger"
+                    *ngIf="reactiveForm.get('username').hasError('minlength')">
+                    <br>The minimum length for this field is {{reactiveForm.get('username').errors['minlength'].requiredLength}} characters.
+                </small> -->
             </div>
             <div class="input-element">
-                <input type="password" class="form-control" name="password" formControlName="password" placeholder="Password">
+                <input type="password" class="form-control" name="password" formControlName="password"
+                    placeholder="Password">
             </div>
             <div class="container" style="background-color:#f1f1f1">
             </div>
             <div class="input-element">
-                <input type="submit" value="Sign Up" name="submit" [disabled]="!reactiveForm.valid" class="form-control btn btn-warning">
+                <input type="submit" value="Sign Up" name="submit" [disabled]="!reactiveForm.valid"
+                    class="form-control btn btn-warning">
             </div>
-            <!-- <div class='row mb-3'>
-                <div class='offset-sm-3 col-sm-6'>
-                    <div class='alert alert-success alert-dismissible fade show' role='alert'>
-                        <strong>You are now signed up!</strong>
-                        <button type='button' class='btn-close' data-bs-dismiss='alert' aria-label='Close'></button>
-                    </div>
-                </div>
-            </div> -->
         </form>
     </div>

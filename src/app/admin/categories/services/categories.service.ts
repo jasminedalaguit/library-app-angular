@@ -1,6 +1,6 @@
 import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Categories, CategoriesCreate } from './categories.interface';
+import { Categories } from './categories.interface';
 import { identifierName } from '@angular/compiler';
 
 @Injectable({
@@ -11,6 +11,9 @@ export class CategoriesService {
   constructor(private http: HttpClient) {}
   getCategories() {
     return this.http.get<Array<Categories>>('http://localhost:8000/categories');
+  }
+  getCategoriesByID(id: {id: number}) {
+    return this.http.get<Array<Categories>>('http://localhost:8000/categories' +id);
   }
 
   postCategory(data: { category_name: string}) {

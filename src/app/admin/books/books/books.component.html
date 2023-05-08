@@ -9,7 +9,7 @@
                 <th>ID</th>
                 <th>Book Title</th>
                 <th>Author</th>
-                <th>Category ID</th>
+                <th>Category</th>
                 <th>File ID</th>
                 <th>Created At</th>
                 <th>Updated At</th>
@@ -21,12 +21,12 @@
                     <td>{{book.id}}</td>
                     <td>{{book.book_title}}</td>
                     <td>{{book.author}}</td>
-                    <td>{{book.category_id}}</td> 
+                    <td>{{book.category.category_name}}</td> 
                     <td>{{book.file_id}}</td>
                     <td>{{book.created_at | date: "yyyy-MM-dd HH:mm:ss"}}</td>
                     <td>{{book.updated_at | date: "yyyy-MM-dd HH:mm:ss"}}</td>
                     <td>
-                        <a style="margin-right: 5px" class='btn btn-primary btn-sm' routerLink='/admin/books/editbooks/{{book.id}}/{{book.book_title}}'>Edit</a>
+                        <a style="margin-right: 5px" class='btn btn-primary btn-sm' routerLink='/admin/books/editbooks/{{book.id}}'>Edit</a>
                         <a class='btn btn-danger btn-sm' (click)="onDelete(book.id)">Delete</a> 
                     </td>
                 </tr>

@@ -14,10 +14,10 @@ const routes: Routes = [
   { path:'admin/categories/categories', component:CategoriesComponent },
   { path:'admin/books/books', component:BooksComponent },
   { path:'admin/categories/create', component:CreateComponent },
-  { path:'admin/categories/edit/:id/:category_name', component:EditComponent },
+  { path:'admin/categories/edit/:id', component:EditComponent },
   { path:'admin/categories/delete', component:DeleteComponent },
   { path:'admin/books/createbooks', component:CreatebooksComponent },
-  { path:'admin/books/editbooks/:id/:category_name', component:EditbooksComponent },
+  { path:'admin/books/editbooks/:id', component:EditbooksComponent },
   { path:'admin/books/deletebooks', component:DeletebooksComponent },
 ];
 

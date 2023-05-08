@@ -14,11 +14,16 @@ export class BooksService {
   getBooks() {
     return this.http.get<Array<BooksInterface>>('http://localhost:8000/books');
   }
+
   uploadBooks(file: FormData) {
-    return this.http.post('http://localhost:8000/upload', file);
+    return this.http.post<{ file_id: string }>('http://localhost:8000/upload', file);
   }
- 
-  deleteBooks(id: {id: number}) {
-    return this.http.delete('http://localhost:8000/books/delete/' +id);
+
+  updateBooks(id: number, file: FormData) {
+    return this.http.post<{ file_id: string }>('http://localhost:8000/books/update/' + id, file);
+  }
+
+  deleteBooks(id: { id: number }) {
+    return this.http.delete('http://localhost:8000/books/delete/' + id);
   }
 }
