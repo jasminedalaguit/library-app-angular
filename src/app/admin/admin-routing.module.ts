@@ -8,17 +8,19 @@ import { CategoriesComponent } from './categories/categories/categories.componen
 import { CreateComponent } from './categories/create/create.component';
 import { DeleteComponent } from './categories/delete/delete.component';
 import { EditComponent } from './categories/edit/edit.component';
+import { AuthGuard } from '../auth.guard';
 
 
 const routes: Routes = [
-  { path:'admin/categories/categories', component:CategoriesComponent },
-  { path:'admin/books/books', component:BooksComponent },
-  { path:'admin/categories/create', component:CreateComponent },
-  { path:'admin/categories/edit/:id', component:EditComponent },
-  { path:'admin/categories/delete', component:DeleteComponent },
-  { path:'admin/books/createbooks', component:CreatebooksComponent },
-  { path:'admin/books/editbooks/:id', component:EditbooksComponent },
-  { path:'admin/books/deletebooks', component:DeletebooksComponent },
+
+  { path: 'admin/categories/categories', component: CategoriesComponent, canActivate: [AuthGuard] },
+  { path: 'admin/books/books', component: BooksComponent, canActivate: [AuthGuard] },
+  { path: 'admin/categories/create', component: CreateComponent, canActivate: [AuthGuard] },
+  { path: 'admin/categories/edit/:id', component: EditComponent, canActivate: [AuthGuard] },
+  { path: 'admin/categories/delete', component: DeleteComponent, canActivate: [AuthGuard] },
+  { path: 'admin/books/createbooks', component: CreatebooksComponent, canActivate: [AuthGuard] },
+  { path: 'admin/books/editbooks/:id', component: EditbooksComponent, canActivate: [AuthGuard] },
+  { path: 'admin/books/deletebooks', component: DeletebooksComponent, canActivate: [AuthGuard] },
 ];
 
 @NgModule({

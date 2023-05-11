@@ -29,6 +29,8 @@ export class LoginComponent implements OnInit{
       next: data => {
       console.log(data)
       if(data) {
+        // TODO e save anga api key sta sesson storage name it lib_key
+        sessionStorage.setItem('lib_key', data.api_key);
         this.router.navigate(['/admin/categories/categories']);
       }
     }, error: (result) => {
