@@ -21,7 +21,7 @@
                     <td>{{book.id}}</td>
                     <td>{{book.book_title}}</td>
                     <td>{{book.author}}</td>
-                    <td>{{book.category.category_name}}</td> 
+                    <td>{{book.category?.category_name}}</td> 
                     <td>{{book.file_id}}</td>
                     <td>{{book.created_at | date: "yyyy-MM-dd HH:mm:ss"}}</td>
                     <td>{{book.updated_at | date: "yyyy-MM-dd HH:mm:ss"}}</td>

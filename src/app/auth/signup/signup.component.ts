@@ -35,8 +35,15 @@ export class SignupComponent implements OnInit {
 
   onSubmit() {
     console.log(this.reactiveForm);
-    console.warn(this.reactiveForm.value);
-    this.signupService.postUser(this.reactiveForm.value).subscribe({
+    console.warn(btoa(this.reactiveForm.value));
+    const data = {
+      firstname: this.reactiveForm.get("firstname").value,
+      lastname: this.reactiveForm.get("lastname").value,
+      email: this.reactiveForm.get("email").value,
+      username: this.reactiveForm.get("username").value,
+      password: btoa(this.reactiveForm.get("password").value)
+    }
+    this.signupService.postUser(data).subscribe({
       next: data => {
       console.log(data)
       if (data) {
